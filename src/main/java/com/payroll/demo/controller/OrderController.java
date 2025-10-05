@@ -5,6 +5,7 @@ import com.payroll.demo.model.Order;
 import com.payroll.demo.model.assembler.OrderModelAssembler;
 import com.payroll.demo.model.domain.Status;
 import com.payroll.demo.model.repository.OrderRepository;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@Tag(name="orders_controller")
 public class OrderController {
 
     private final OrderRepository orderRepository;
