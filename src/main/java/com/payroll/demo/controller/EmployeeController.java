@@ -6,6 +6,7 @@ import com.payroll.demo.model.assembler.EmployeeModelAssembler;
 import com.payroll.demo.model.repository.EmployeeRepository;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@Tag(name="employees_controller")
 public class EmployeeController {
 
     private final EmployeeRepository repository;
